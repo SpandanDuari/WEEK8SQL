@@ -20,7 +20,7 @@ public class Main {
             connection = DriverManager.getConnection(JDBC_URL, USER, PASSWORD);
 
             if (connection != null) {
-                System.out.println("Connection to the MySQL database established successfully!");
+                System.out.println("Connection to the MySQL database established ");
             } else {
                 System.out.println("Failed to connect to the MySQL database.");
             }
@@ -31,16 +31,6 @@ public class Main {
         } catch (ClassNotFoundException e) {
             // Handle error for Class.forName (if the driver class is not found)
             e.printStackTrace();
-        } finally {
-            try {
-                // 3. Close the connection
-                if (connection != null) {
-                    connection.close();
-                    System.out.println("Connection closed successfully.");
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
     }
 }
